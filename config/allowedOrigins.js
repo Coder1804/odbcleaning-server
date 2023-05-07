@@ -1,5 +1,5 @@
 const allowedOrigins = [
-    "https://xonqaximchistka.com/"
+    "https://xonqaximchistka.com"
 ]
 
 module.exports = allowedOrigins

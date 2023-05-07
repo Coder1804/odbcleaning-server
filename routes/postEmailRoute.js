@@ -6,6 +6,7 @@ const {EmailJSResponseStatus} = require("@emailjs/nodejs");
 
 router.post('/sendemail' , async (req,res)=>{
     const {username , phone , message } = req.body;
+    if(username.length < 3 || phone.length !== 12 || message.length < 10) return res.status(500).json({success:false,errmessage:'invalid input'})
     const templateParams =  {
             from_name: username,
             to_name: "ODB CLEANING SERVICE",
