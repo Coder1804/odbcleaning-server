@@ -26,7 +26,11 @@ app.use(limiter);
 app.set('trust proxy' , 1);
 
 //cors
-app.use(cors(corsOptions))
+app.use(cors({
+    origin:"https://xonqaximchistka.com/",
+    credentials: true,
+    optionsSuccessStatus: 200
+}))
 //express
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
