@@ -29,7 +29,8 @@ app.set('trust proxy' , 1);
 app.use(cors({
     origin:"https://xonqaximchistka.com/",
     credentials: true,
-    optionsSuccessStatus: 200
+    optionsSuccessStatus: 200,
+    allowedHeaders:['Content-Type', 'Authorization']
 }))
 //express
 // parse application/x-www-form-urlencoded
