@@ -14,7 +14,7 @@ const app = express();
 
 const limiter = rateLimit({
     windowMs: 24 * 60  * 60 * 1000, // 24  hours
-    max: 1000, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+    max: 3, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
     message:"Urinishlar soni juda ko'p! Iltimos keyinroq urinib ko'ring",
     statusCode: 429,
     standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
